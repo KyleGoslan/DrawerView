@@ -624,7 +624,7 @@ private struct ChildScrollViewInfo {
     ///
     /// - parameter position The position to be set.
     /// - parameter animated Wheter the change should be animated or not.
-    public func setPosition(_ position: DrawerPosition, animated: Bool, completion: ((Bool) -> Void)? = nil) {
+    open func setPosition(_ position: DrawerPosition, animated: Bool, completion: ((Bool) -> Void)? = nil) {
 
         // Don't notify about position if concealing the drawer. Notify only if position changed.
         let visiblePosition = (_isConcealed ? .closed : position)
